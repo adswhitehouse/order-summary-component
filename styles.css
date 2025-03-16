@@ -1,0 +1,137 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Variables */
+:root {
+  /* Font */
+  --ff-primary: "Red Hat Display", sans-serif;
+
+  /* Colors */
+  --white: #fff;
+  --blue-1: #1f2e55;
+  --blue-2: #382ae1;
+  --blue-3: #717fa6;
+
+  /* Font Sizes */
+  --fs-1: 1.5rem;
+  --fs-2: 1rem;
+  --fs-3: 0.938rem;
+  --fs-4: 0.875rem;
+
+  /* Font Weights */
+  --fw-1: 900;
+  --fw-2: 700;
+  --fw-3: 500;
+}
+
+/* Utility Classes */
+/* Colors */
+.white {
+  color: var(--white);
+}
+
+.blue-1 {
+  color: var(--blue-1);
+}
+
+.blue-2 {
+  color: var(--blue-2);
+}
+
+.blue-3 {
+  color: var(--blue-3);
+}
+
+/* Background Colors */
+.white-bg {
+  background-color: var(--white);
+}
+
+.blue-2-bg {
+  background-color: var(--blue-2);
+}
+
+/* Text Presets */
+.tp-1 {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-1);
+}
+
+.tp-2 {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-3);
+}
+
+.tp-3 {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-1);
+}
+
+.tp-4 {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-1);
+}
+
+.tp-5 {
+  font-size: var(--fs-4);
+  font-weight: var(--fw-2);
+}
