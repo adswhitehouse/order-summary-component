@@ -70,6 +70,7 @@ textarea:not([rows]) {
   --blue-1: #1f2e55;
   --blue-2: #382ae1;
   --blue-3: #717fa6;
+  --body: #e0e8ff;
 
   /* Font Sizes */
   --fs-1: 1.5rem;
@@ -84,6 +85,11 @@ textarea:not([rows]) {
 }
 
 /* Utility Classes */
+/* Font */
+.ff-primary {
+  font-family: var(--ff-primary);
+}
+
 /* Colors */
 .white {
   color: var(--white);
@@ -110,6 +116,10 @@ textarea:not([rows]) {
   background-color: var(--blue-2);
 }
 
+.body {
+  background-color: var(--body);
+}
+
 /* Text Presets */
 .tp-1 {
   font-size: var(--fs-1);
@@ -134,4 +144,115 @@ textarea:not([rows]) {
 .tp-5 {
   font-size: var(--fs-4);
   font-weight: var(--fw-2);
+}
+
+/* Body */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: -7.5rem;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 60vh;
+  background: url(./images/pattern-background-desktop.svg) no-repeat center
+    center / cover;
+  z-index: -1;
+}
+
+/* Component */
+.component {
+  max-width: 28rem;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+/* Component Contents */
+.main-img {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.component-info {
+  padding: 3rem;
+}
+
+.component-info h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.component-info p {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.plan {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.plan a {
+  margin-left: auto;
+}
+
+.plan img {
+  margin-right: 1rem;
+}
+
+.user-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.change {
+  transition: color 0.5s;
+}
+
+.proceed {
+  display: block;
+  width: 100%;
+  padding-block: 1rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  margin-top: 2rem;
+  transition: background-color 0.5s;
+}
+
+.cancel {
+  margin-inline: auto;
+  display: block;
+  width: fit-content;
+  margin-top: 2rem;
+  transition: color 0.25s;
+}
+
+/* Hover */
+.change:hover {
+  color: var(--blue-3);
+}
+
+.proceed:hover {
+  background-color: var(--blue-3);
+}
+
+.cancel:hover {
+  color: var(--blue-1);
+}
+
+/* Media Query */
+@media screen and (max-width: 30rem) {
+  .plan {
+    padding-inline: 0;
+  }
 }
